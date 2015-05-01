@@ -1,0 +1,10 @@
+SRC = '''stdb.c'''
+DEPS= '''tdb talloc replace util LIBCRYPTO'''
+
+bld.SAMBA_LIBRARY('stdb',
+                  source=SRC,
+                  deps=DEPS,
+		  public_headers='include/stdb.h',
+		  public_headers_install=False,
+                  includes='include',
+                  private_library=True)
